@@ -1,14 +1,17 @@
 {
-  "name": "getting-started-with-webassembly",
-  "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
-  "scripts": {
-    "start": "node server.js"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.17.1"
-  }
+	"name": "getting-started-with-webassembly",
+	"version": "1.0.0",
+	"description": "",
+	"main": "server.js",
+	"scripts": {
+		"start": "node server.js",
+		"compileJS": "emcc lib/demo.c -s WASM=1 --post-js public/ready.js -O2 -o public/demo.js",
+		"compileHTML": "emcc lib/demo.c -s WASM=1 -o public/demo.html",
+		"compileWASM": "emcc lib/demo.c -s WASM=1 -o public/demo.wasm"
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"express": "^4.17.1"
+	}
 }

@@ -1,0 +1,1 @@
+- emcc lib/demo.c -s WASM=1 -s EXPORTED_FUNCTIONS="['_getNum', '_main', '_getDouleNum']" -o public/demo.js
