@@ -21,3 +21,11 @@ char *greet(char *name)
 {
     return strcat("Hello ", name);
 }
+
+void play(int n)
+{
+    for (size_t i = 0; i < n; n--)
+    {
+        printf("%d\n", n);
+    }
+}

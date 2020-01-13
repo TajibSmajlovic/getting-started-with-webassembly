@@ -1,1 +1,5 @@
 - emcc lib/demo.c -s WASM=1 -s EXPORTED_FUNCTIONS="['_getNum', '_main', '_getDouleNum']" -o public/demo.js
+- UTF8ToString(_getStr())
+- stringToUTF32("new Value", _getStr(), "new Value".length)
+- lengthBytesUTF8("Something very new.")
+- emcc lib/string.c -s WASM=1 -s EXPORTED_FUNCTIONS="['_getStr']" -s TOTAL_MEMORY=64MB -o public/string.js
