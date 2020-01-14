@@ -3,3 +3,7 @@
 - stringToUTF32("new Value", _getStr(), "new Value".length)
 - lengthBytesUTF8("Something very new.")
 - emcc lib/string.c -s WASM=1 -s EXPORTED_FUNCTIONS="['_getStr']" -s TOTAL_MEMORY=64MB -o public/string.js
+- Module["onRuntimeInitialized"] = () => {
+	console.log("Runtime Ready");
+	console.log(UTF8ToString(_getStr()));
+};
